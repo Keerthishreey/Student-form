@@ -4,85 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Details Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-    .container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      width: 300px;
-      margin: auto;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-    }
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="number"] {
-      width: 100%;
-      padding: 8px;
-      margin-top: 4px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .buttons {
-      margin-top: 15px;
-      text-align: center;
-    }
-    button {
-      padding: 8px 16px;
-      margin: 5px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .submit {
-      background-color: #4CAF50;
-      color: white;
-    }
-    .clear {
-      background-color: #f44336;
-      color: white;
-    }
-  </style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <h2>Student Details</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+<body class="bg-light">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+  <div class="container mt-5">
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">Student Details</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
 
-      <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="Male"> Male
-      <input type="radio" id="female" name="gender" value="Female"> Female
-      
-      <label for="Mark1">Mark 1:</label>
-      <input type="number" id="mark1" name="mark1">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
 
-      <label for="Mark2">Mark 2:</label>
-      <input type="number" id="mark2" name="mark2">
+        <div class="mb-3">
+          <label class="form-label">Gender</label><br>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="male" name="gender" value="Male" class="form-check-input">
+            <label for="male" class="form-check-label">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="female" name="gender" value="Female" class="form-check-input">
+            <label for="female" class="form-check-label">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="other" name="gender" value="Other" class="form-check-input">
+            <label for="other" class="form-check-label">Other</label>
+          </div>
+        </div>
 
-      <label for="Mark3">Mark 3:</label>
-      <input type="number" id="mark3" name="mark3">
+        <div class="mb-3">
+          <label for="mark1" class="form-label">Mark 1</label>
+          <input type="number" id="mark1" name="mark1" class="form-control">
+        </div>
 
-      <div class="buttons">
-        <button type="submit" class="submit">Submit</button>
-        <button type="reset" class="clear">Clear</button>
-      </div>
-    </form>
+        <div class="mb-3">
+          <label for="mark2" class="form-label">Mark 2</label>
+          <input type="number" id="mark2" name="mark2" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label for="mark3" class="form-label">Mark 3</label>
+          <input type="number" id="mark3" name="mark3" class="form-control">
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="reset" class="btn btn-danger">Clear</button>
+        </div>
+      </form>
+    </div>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
