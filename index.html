@@ -45,6 +45,11 @@
       border-radius: 4px;
       cursor: pointer;
     }
+    .error {
+  color: red;
+  font-size: 12px;
+}
+
     .submit {
       background-color: #4CAF50;
       color: white;
@@ -58,31 +63,40 @@
 <body>
   <div class="container">
     <h2>Student Details</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <form id="studentForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <span class="error" id="nameError"></span>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <span class="error" id="emailError"></span>
 
-      <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="Male"> Male
-      <input type="radio" id="female" name="gender" value="Female"> Female
-      
-      <label for="Mark1">Mark 1:</label>
-      <input type="number" id="mark1" name="mark1">
+  <label>Gender:</label>
+  <input type="radio" id="male" name="gender" value="Male"> Male
+  <input type="radio" id="female" name="gender" value="Female"> Female
+  <span class="error" id="genderError"></span>
 
-      <label for="Mark2">Mark 2:</label>
-      <input type="number" id="mark2" name="mark2">
+  <label for="mark1">Mark 1:</label>
+  <input type="number" id="mark1" name="mark1">
+  <span class="error" id="mark1Error"></span>
 
-      <label for="Mark3">Mark 3:</label>
-      <input type="number" id="mark3" name="mark3">
+  <label for="mark2">Mark 2:</label>
+  <input type="number" id="mark2" name="mark2">
+  <span class="error" id="mark2Error"></span>
 
-      <div class="buttons">
-        <button type="submit" class="submit">Submit</button>
-        <button type="reset" class="clear">Clear</button>
-      </div>
-    </form>
+  <label for="mark3">Mark 3:</label>
+  <input type="number" id="mark3" name="mark3">
+  <span class="error" id="mark3Error"></span>
+
+  <div class="buttons">
+    <button type="submit" class="submit">Submit</button>
+    <button type="reset" class="clear">Clear</button>
+  </div>
+</form>
+
+<script src="validation.js"></script>
+
   </div>
 </body>
 </html>
